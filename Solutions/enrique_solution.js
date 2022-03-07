@@ -41,7 +41,7 @@ function mul(...nums) {
 }
 
 function min(...nums) {
-  // return Math.min(...nums);
+  // return Math.min(...nums); <-- Feels like cheating
   return nums.reduce((previous, current) => (
     previous < current ? previous : current
   ));
@@ -130,8 +130,7 @@ function accRecurse(callback, initial) {
 }
 
 function fill(num) {
-  // return Array(num).fill(num);
-
+  // return Array(num).fill(num); <-- Feels like cheating
   const array = [];
   for (let i = 0; i < num; i += 1) {
     array.push(num);
@@ -148,8 +147,7 @@ function fillRecurse(num, arr = []) {
 }
 
 function set(...args) {
-  // return Array.from(new Set(args));
-
+  // return Array.from(new Set(args)); <-- Feels like cheating
   const res = [];
 
   args.forEach((arg) => {
@@ -171,7 +169,7 @@ function liftf(binary) {
   return (a) => (b) => binary(a, b);
 }
 
-console.log(addf(2)(3));
+// console.log(addf(2)(3));
 
 module.exports = {
   identity,
